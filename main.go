@@ -1,11 +1,10 @@
 package main
 
 import (
-	_ "OnlineMeeting/internal/packed"
-
 	"github.com/gogf/gf/v2/os/gctx"
 
 	"OnlineMeeting/internal/cmd"
+	_ "OnlineMeeting/internal/system/logic/token"
 )
 
 func main() {

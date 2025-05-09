@@ -48,4 +48,4 @@ gfcli:
     dao:
     - link:     "mysql:root:12345678@tcp(47.109.79.103:3306)/OnlineMeeting?charset=utf8mb4&parseTime=true&loc=Local"
       tables:   "t_meeting,t_meeting_participant"
-      jsonCase: "CamelLower"
+      jsonCase: "Camel"

@@ -23,7 +23,7 @@ gfToken:
   maxRefresh: 5400
   multiLogin: true
   encryptKey: "49c54195e750b04e74a8429b17896586"
-  cacheModel: "redis" #缓存模式 memory OR redis OR dist
+  cacheModel: "dist" #缓存模式 memory OR redis OR dist
   distPath: "./resource/data/distTokenDb" #使用磁盘缓存时配置数据缓存的目录
   excludePaths:
     - "/api/v1/system/login"
@@ -42,3 +42,10 @@ redis:
     readTimeout: "30s" #TCP的Read操作超时时间，使用时间字符串例如30s/1m/1d
     writeTimeout: "30s" #TCP的Write操作超时时间，使用时间字符串例如30s/1m/1d
     maxActive: 100
+
+gfcli:
+  gen:
+    dao:
+    - link:     "mysql:root:12345678@tcp(47.109.79.103:3306)/OnlineMeeting?charset=utf8mb4&parseTime=true&loc=Local"
+      tables:   "t_meeting,t_meeting_participant"
+      jsonCase: "CamelLower"

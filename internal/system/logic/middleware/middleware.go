@@ -34,6 +34,14 @@ func (s *sMiddleware) Ctx(r *ghttp.Request) {
 	r.Middleware.Next()
 }
 
+func (s *sMiddleware) MiddlewareCORS(r *ghttp.Request) {
+	corsOptions := r.Response.DefaultCORSOptions()
+	// you can set options
+	//corsOptions.AllowDomain = []string{"goframe.org", "baidu.com"}
+	r.Response.CORS(corsOptions)
+	r.Middleware.Next()
+}
+
 // Auth 权限判断处理中间件
 func (s *sMiddleware) Auth(r *ghttp.Request) {
 	// ctx := r.GetCtx()

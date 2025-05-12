@@ -20,6 +20,8 @@ var (
 				router.R.BindController(ctx, group)
 			})
 
+			s.SetClientMaxBodySize(100 * 1024 * 1024) // 600MB max file size
+
 			s.Run()
 			return nil
 		},

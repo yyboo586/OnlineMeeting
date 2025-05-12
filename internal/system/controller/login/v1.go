@@ -29,3 +29,8 @@ func (c *loginControllerV1) Login(ctx context.Context, req *system.LoginReq) (re
 	res.Token = data
 	return
 }
+
+func (c *loginControllerV1) Logout(ctx context.Context, req *system.LogoutReq) (res *system.LogoutRes, err error) {
+	res = new(system.LogoutRes)
+	return
+}

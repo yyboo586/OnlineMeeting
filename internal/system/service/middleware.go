@@ -7,6 +7,7 @@ import (
 type IMiddleware interface {
 	Ctx(r *ghttp.Request)
 	Auth(r *ghttp.Request)
+	MiddlewareCORS(r *ghttp.Request)
 }
 
 var localMiddleware IMiddleware
